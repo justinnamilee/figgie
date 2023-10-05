@@ -20,18 +20,18 @@ export default class figgie {
 
   open() {
     this.ex = express();
-    this.ex.use(favico(path.join(this.base, config.publicFolder, config.favico)));
+    this.ex.use(favico(path.join(this.base, this.config.publicFolder, this.config.favico)));
 
-    this.server = this.ex.listen(config.port, () => {
+    this.server = this.ex.listen(this.config.port, () => {
       console.log(this.config.ui.startup + this.server.address().port);
     });
   }
 
   close(err, done) {
-    this.server.close(() => { console.log(c.ui.shutdownSuccess); done() });
+    this.server.close(() => { console.log(this.config.ui.shutdownSuccess); done() });
 
     setTimeout(
-      () => { console.log(this.c.ui.shutdownFail); err() },
+      () => { console.log(this.config.ui.shutdownFail); err() },
       this.config.graceTime * 1000
     );
   }

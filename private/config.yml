@@ -17,4 +17,4 @@ figgie:
 global:
   ui:
     shutdown: "Hey, figgie is shutting down."
-    startup: "Hey, figgie is done starting up."
+    startup: "Hey, figgie is starting up."
