@@ -1,0 +1,20 @@
+---
+figgie:
+  favico: "unicorn.ico"
+  graceTime: 30
+  port: 8969
+  publicFolder: "public"
+  rootFile: "about.html"
+  route:
+    default: "/:inputText"
+    extended: "/:inputText/:fontName"
+    root: "/"
+  trim: true
+  ui:
+    shutdownFail: "Failed to stop Express server in time."
+    shutdownSuccess: "Express server stopped."
+    startup: "Express server starting at port: "
+global:
+  ui:
+    shutdown: "Hey, figgie is shutting down."
+    startup: "Hey, figgie is done starting up."

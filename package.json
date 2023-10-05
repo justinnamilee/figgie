@@ -1,0 +1,29 @@
+{
+  "name": "figgie",
+  "version": "0.1.0",
+  "type": "module",
+  "description": "Simple Express driver for figlet.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/justinnamilee/figgie.git"
+  },
+  "keywords": [
+    "figlet"
+  ],
+  "author": "Justin Lee",
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/justinnamilee/figgie/issues"
+  },
+  "homepage": "https://github.com/justinnamilee/figgie#readme",
+  "dependencies": {
+    "express": "^4.18.2",
+    "express-favicon": "^2.0.4",
+    "figlet": "^1.6.0",
+    "yaml": "^2.3.2"
+  }
+}
