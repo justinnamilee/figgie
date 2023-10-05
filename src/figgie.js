@@ -12,14 +12,22 @@ export default class figgie {
   constructor(base, config) {
     this.base = base;
     this.config = config;
+    this.ex = express();
+
+    // ! express static
+    this.ex.use(express.static(path.join(this.base, config.publicFolder)));
 
     //! add static route stuff here
+    this.ex.get(
+      this.config.route.root,
+      (req, res) => { res.redirect(this.config.rootFile) }
+    );
 
     //! add dynamic route stuff here
+    //TODO: everything
   }
 
   open() {
-    this.ex = express();
     this.ex.use(favico(path.join(this.base, this.config.publicFolder, this.config.favico)));
 
     this.server = this.ex.listen(this.config.port, () => {
