@@ -14,6 +14,9 @@ export default class figgie {
     this.config = config;
     this.express = express();
 
+    // express config
+    this.express.use(favico(path.join(this.base, this.config.folder.public, this.config.file.favico)));
+
     // express routes
     this.express.get(
       this.config.route.root,
@@ -65,11 +68,10 @@ export default class figgie {
 
   // server control
   open() {
-    this.express.use(favico(path.join(this.base, this.config.folder.public, this.config.favico)));
-
     this.server = this.express.listen(this.config.port, () => {
       console.log(this.config.ui.startup + this.server.address().port);
     });
+    
   }
 
   close(err, done) {

@@ -1,8 +1,8 @@
 ---
 figgie:
-  favico: "unicorn.ico"
   file:
     about: "about.html"
+    favico: "unicorn.ico"
   folder:
     public: "public"
   graceTime: 30
