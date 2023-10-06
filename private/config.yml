@@ -1,15 +1,21 @@
 ---
 figgie:
   favico: "unicorn.ico"
+  file:
+    about: "about.html"
+  folder:
+    public: "public"
   graceTime: 30
+  param:
+    font: fontName
+    text: inputText
   port: 8969
-  publicFolder: "public"
-  rootFile: "about.html"
   route:
     default: "/:inputText"
     extended: "/:inputText/:fontName"
+    font: "/font"
     root: "/"
-  trim: true
+  trim: false
   ui:
     shutdownFail: "Failed to stop Express server in time."
     shutdownSuccess: "Express server stopped."
