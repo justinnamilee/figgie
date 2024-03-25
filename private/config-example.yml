@@ -1,7 +1,7 @@
 ---
 figgie:
   file:
-    about: "about.html"
+    health: "health.txt"
     favico: "unicorn.ico"
   folder:
     public: "public"

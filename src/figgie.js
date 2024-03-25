@@ -20,7 +20,7 @@ export default class figgie {
     // express routes
     this.express.get(
       this.config.route.root,
-      (req, res) => { res.sendFile(path.join(this.base, this.config.folder.public, this.config.file.about)) }
+      (req, res) => { res.sendFile(path.join(this.base, this.config.folder.public, this.config.file.health)) }
     );
 
     this.express.get(
