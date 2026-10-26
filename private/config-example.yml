@@ -1,0 +1,26 @@
+---
+figgie:
+  file:
+    health: "health.txt"
+    favico: "unicorn.ico"
+  folder:
+    public: "public"
+  graceTime: 30
+  param:
+    font: fontName
+    text: inputText
+  port: 8969
+  route:
+    default: "/:inputText"
+    extended: "/:inputText/:fontName"
+    font: "/font"
+    root: "/"
+  trim: false
+  ui:
+    shutdownFail: "Failed to stop Express server in time."
+    shutdownSuccess: "Express server stopped."
+    startup: "Express server starting at port: "
+global:
+  ui:
+    shutdown: "Hey, figgie is shutting down."
+    startup: "Hey, figgie is starting up."
